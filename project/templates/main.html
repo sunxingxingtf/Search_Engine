@@ -1,0 +1,22 @@
+﻿{% include "head.html"  %}
+<body style="height: auto;">
+{% include "top.html"  %}
+
+<div id="wrapper_wrapper">
+<div id="container" class="container_1">
+<div id="content_left">
+{% for SitePath in SP %}
+	{% for SiteTitle in ST %}
+	    {% ifequal forloop.counter forloop.parentloop.counter %}
+	        {% include "recultcontainer.html"  %}
+		{% endifequal %}
+	{% endfor %}
+{% endfor %}
+</div>
+<div style="clear:both;height:19px;"></div>
+</div>
+</div>
+
+{% include "footer.html" %}
+
+</body>
